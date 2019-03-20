@@ -1,4 +1,7 @@
 # td1
+Cette application permet d'ajouter une note de 100 caractères maximum tout en affichant le nombre de caractères restants. Le background de l'afficheur du nombre de caractères restants change de couleurs en fonction du nombre de caractères (<50 jaune <20 rouge).
+On peut également enregistrer et effacer le contenu de la note. Tout cela est entouré de messages d'informations
+
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.

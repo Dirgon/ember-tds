@@ -1,10 +1,16 @@
 # td2
+Cette application a les fonctionnalités suivantes :
+Lister les produits disponibles
+Ajouter un ou plusieurs produits disponibles aux produits sélectionnés
+Ajouter tous les produits disponibles aux produits sélectionnés
+Retirer un ou plusieurs produits sélectionnés
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
 ## Prerequisites
-
+ember install ember-bootstrap
+ember install ember-font-awesome
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)

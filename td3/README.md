@@ -1,7 +1,8 @@
-# prjt4
-
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# TD3
+Ce projet permet de:
+-Obtenir une liste de contacts et la filtrer
+-Ajouter un contact dans une liste
+-Modifier un contact existant
 
 ## Prerequisites
 
@@ -17,6 +18,9 @@ You will need the following things properly installed on your computer.
 * `git clone <repository-url>` this repository
 * `cd prjt4`
 * `npm install`
+ember install ember-bootstrap
+ember install ember-font-awesome
+ember install ember-local-storage
 
 ## Running / Development
 

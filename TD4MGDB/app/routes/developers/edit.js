@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 import EmberObject, {set} from '@ember/object';
 
 export default Route.extend({
-  templateName:'developers/new',
+  templateName:'developers/edit',
   afterModel( model){
     let copy = EmberObject.create(model.toJSON());
     set(model,'copy', copy);

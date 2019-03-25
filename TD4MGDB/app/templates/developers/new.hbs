@@ -1,3 +1,6 @@
-{{input value=model.copy.identity placeholder="Identity"}}
-<button class='ui success button'{{action "save" model}}></button>
+<div class="ui header">Ajouter un développeur</div>
+
+{{input value=model.copy.identity class="ui input"}}
+<button {{action "save" model }}class="ui primary button">Ajouter</button>
+
 {{outlet}}

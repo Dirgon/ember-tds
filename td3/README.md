@@ -1,5 +1,5 @@
 # TD3
-Ce projet permet de:
+Ce projet permet de :
 -Obtenir une liste de contacts et la filtrer
 -Ajouter un contact dans une liste
 -Modifier un contact existant

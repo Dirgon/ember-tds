@@ -19,12 +19,18 @@
 
   </div>
   <div class="field">
-    <label>Owner :</label>
-    <select>
-      {{#each model.devs as |dev|}}
-        <option value={{dev.identity}}>{{dev.identity}} </option>
-      {{/each}}
-    </select>
+    <label>Propriétaire</label>
+    {{#ui-dropdown class="selection" selected=model.copy.owner onChange=(action (mut model.copy.owner)) as |execute mapper|}}
+      <div class="default text">{{if model.owner model.owner.identity "Propriétaire"}}</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each model.devs as |owner|}}
+          <div data-value="{{map-value mapper owner}}" class="item">
+            {{owner.identity}}
+          </div>
+        {{/each}}
+      </div>
+    {{/ui-dropdown}}
   </div>
   <div>
     <button class ="user icon ui button green" {{action "save" model}}>

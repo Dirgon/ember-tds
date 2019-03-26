@@ -1,7 +1,6 @@
 
 <br>
 <div class="ui container  one column centered grid">
-{{outlet}}
   <div class="ui two column centered grid four column row">
   {{#link-to "projects.new"}}
   <button class="ui green  button" actions>
@@ -11,6 +10,8 @@
 {{/link-to}}
 
 </div>
+{{outlet}}
+
 <table class="ui compact green collapsing table">
   <thead>
     <tr colspan="2">
@@ -35,9 +36,9 @@
 
 
 <td>
-  <!-- {{#link-to "projects" dev class="ui icon circular basic button"}}
+  {{#link-to "projects.edit" project class="ui icon circular basic button"}}
     <i class="ui icon edit"></i>
-    {{/link-to}}-->
+  {{/link-to}}
 <button {{action "confirmSupp" model project}} class="ui icon  inverted red circular button">
   <i class="ui icon delete"></i>
 </button>

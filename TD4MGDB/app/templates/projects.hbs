@@ -14,7 +14,8 @@
 <table class="ui compact green collapsing table">
   <thead>
     <tr colspan="2">
-      <th>Nom</th>
+      <th>Nom du projet</th>
+      <th>Propriétaire du projet</th>
       <th>Descriptif</th>
       <th>Date de début</th>
       <th>Date de fin</th>
@@ -27,6 +28,7 @@
   {{#each model.projects as |project|}}
 <tr>
   <td> {{project.name}} </td>
+  <td> {{project.owner.identity}} </td>
   <td> {{project.description}} </td>
   <td> {{moment-format project.startDate 'DD/MM/YYYY'}} </td>
   <td> {{moment-format project.dueDate 'DD/MM/YYYY'}} </td>
@@ -35,14 +37,26 @@
 <td>
   <!-- {{#link-to "projects" dev class="ui icon circular basic button"}}
     <i class="ui icon edit"></i>
-    {{/link-to}}
-<button {{action "confirmSupp" model dev}} class="ui icon  inverted red circular button">
+    {{/link-to}}-->
+<button {{action "confirmSupp" model project}} class="ui icon  inverted red circular button">
   <i class="ui icon delete"></i>
-</button> -->
+</button>
 </td>
 </tr>
   {{/each}}
 
 </tbody>
 </table>
+{{#if model.suppr}}
+<div class="ui one column centered grid three column row ">
+Voulez vous supprimer '{{model.projectTmp.name}}' ?
+{{#link-to "projects"}}
+<br><br>
+<button class="ui green button  " {{action "delete" model model.projectTmp}}> <i class="check icon"></i>Confirmer </button>
+{{/link-to}}
+{{#link-to "projects"}}
+<button class="ui  red button"{{action "cancel" model}}> <i class="cancel icon"></i>Annuler </button>
+{{/link-to}}
+</div>
+{{/if}}
 </div>

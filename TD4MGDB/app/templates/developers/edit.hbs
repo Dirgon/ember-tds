@@ -1,6 +1,9 @@
-<div class="ui header">Modifier un développeur</div>
-
-{{input value=model.copy.identity class="ui input"}}
-<button {{action "save" model }}class="ui primary button">Modifier</button>
-
+<div class="ui one column centered grid three column row ">
+<div class="ui input ">
+  {{input  value=model.copy.identity placeholder="identity"}}
+</div>
+{{#link-to "developers"}}
+  <button class ="user icon ui button green" {{action "save" model}}>Modifier</button>
+{{/link-to}}
 {{outlet}}
+</div>

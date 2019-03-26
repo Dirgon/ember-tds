@@ -1,6 +1,8 @@
-<div class="ui header">Ajouter un développeur</div>
-
-{{input value=model.copy.identity class="ui input"}}
-<button {{action "save" model }}class="ui primary button">Ajouter</button>
-
+<div class="ui one column centered grid three column row ">
+  <div class="ui input">
+  {{input  value=model.copy.identity placeholder="identity"}}
+  </div>
+  <button class ="user icon ui button green" {{action "save" model}}>
+    <i class="ui  plus square icon"></i> Ajouter</button>
+</div>
 {{outlet}}

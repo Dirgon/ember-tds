@@ -1,30 +1,56 @@
-{{#link-to "developers.new" class="ui button"}}
-  Ajouter un contact...
+<div class="ui  container  one column centered grid">
+
+  <div class="ui one column centered grid three column row">
+  {{#link-to "developers.new"}}
+  <button class="ui green button" actions>
+      Ajouter un developpeur...
+
+  </button>
 {{/link-to}}
-<table class="table">
-  <thead class="thead-dark">
-  <tr>
-    <th scope="col">Identity</th>
-    <th scope="col" class="text-center">Actions</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#each model as |dev|}}
-    <tr>
-      <td>{{dev.identity}}</td>
-      <td class="text-center">
-        {{#link-to "developers.edit" dev class="ui icon circular button"}}
-          {{!-- <button class="ui icon circular button"> --}}
-            {{!-- <i class="ui icon edit"></i> --}}
-            <i class="ui edit icon"></i>
-          {{!-- </button> --}}
-        {{/link-to}}
-        <button {{action "delete" dev}} class="ui icon circular button">
-          <i class="ui icon remove"></i>
-        </button>
-      </td>
-    </tr>
-  {{/each}}
-  </tbody>
-</table>
+
+</div>
 {{outlet}}
+<table class="ui compact green collapsing table">
+  <thead>
+    <tr colspan="2">
+      <th> Identity</th>
+      <th></th>
+
+    </tr>
+  </thead>
+
+    <tbody>
+
+  {{#each model.devs as |dev|}}
+<tr>
+  <td> {{dev.identity}} </td>
+<td>
+    {{#link-to "developers.edit" dev class="ui icon circular basic button"}}
+      <i class="ui icon edit"></i>
+      {{/link-to}}
+  <button {{action "confirmSupp" model dev}} class="ui icon  inverted red circular button">
+    <i class="ui icon delete"></i>
+  </button>
+</td>
+</tr>
+  {{/each}}
+
+</tbody>
+</table>
+
+
+
+{{#if model.suppr}}
+<div class="ui one column centered grid three column row ">
+Voulez vous supprimer '{{model.devTmp.identity}}' ?
+{{#link-to "developers"}}
+<br><br>
+<button class="ui green button  " {{action "delete" model model.devTmp}}> <i class="check icon"></i>Confirmer </button>
+{{/link-to}}
+{{#link-to "developers"}}
+<button class="ui  red button"{{action "cancel" model}}> <i class="cancel icon"></i>Annuler </button>
+{{/link-to}}
+</div>
+{{/if}}
+
+</div>

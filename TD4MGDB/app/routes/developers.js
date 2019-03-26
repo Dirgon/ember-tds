@@ -1,16 +1,26 @@
 import Route from '@ember/routing/route';
+import EmberObject,{get,set} from '@ember/object'
+
 
 export default Route.extend({
-
-model(){
-    return this.store.findAll('developer');
-},
-
-actions:{
-    delete(dev){
-      if( confirm("La suppression est définitive, êtes-vous sûr ?") ){
-        dev.destroyRecord();
-      }
+  model(){
+    return {
+      devs : this.store.findAll('developer'),
+      suppr : false,
+      devTmp : null
+    };
+  },
+  actions:{
+    delete(model,dev){
+      dev.destroyRecord();
+      set(model,'suppr',false);
+    },
+    confirmSupp(model,dev){
+      set(model,'suppr',true);
+      set(model,'devTmp',dev);
+    },
+    cancel(model){
+      set(model,'suppr',false);
     }
-}
+  }
 });

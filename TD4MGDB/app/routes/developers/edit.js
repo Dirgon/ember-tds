@@ -16,7 +16,7 @@ export default Route.extend({
     save(model)
     {
       model.setProperties(JSON.parse(JSON.stringify(model.copy)));
-      model.save().then(set(model, "copy",{})); //
+      model.save().then(set(model,"copy",{})); //
     }
   }
 

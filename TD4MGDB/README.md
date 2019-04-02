@@ -1,4 +1,5 @@
 # TD3
+Pour installer cette application veuillez créer un nouveau projet ember appelé "boards" et glisser l'app en faisant bien "remplacer les fichiers" puis lancer avec ember serve.
 Cette application est un outil qui permet de gérer des projets.
 On peut ici ajouter un developpeur et un projet.
 Le projet peut avoir un développeur qui lui est associé.

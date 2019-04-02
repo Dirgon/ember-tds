@@ -4,14 +4,16 @@ Cette application est un outil qui permet de gérer des projets.
 On peut ici ajouter un developpeur et un projet.
 Le projet peut avoir un développeur qui lui est associé.
 Un projet possède des stories.
+Objectifs : 
+Se connecter à un service web externe
+Créer des composants
+Manipuler les models
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
 ## Prerequisites
-ember install ember-bootstrap
-ember install semantic-ui-ember
-ember install ember-font-awesome
+ ember install ember-bootstrap
+ ember install semantic-ui-ember
+ ember install ember-font-awesome
 
 You will need the following things properly installed on your computer.
 

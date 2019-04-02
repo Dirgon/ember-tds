@@ -1,5 +1,5 @@
 Ce dossier comporte toutes les applications developpées lors et en dehors de 
-mes cours de Client Riche orchestré par Jean-Christophe HERON.
+mes cours de Client Riche orchestré par Jean-Christophe HERON. Chaque application possède un README avec des details supplémentaires
 Ce fût une initiation à Ember et MongoDB.
 Apprentissage :
 - Créer un projet

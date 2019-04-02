@@ -11,9 +11,9 @@ Manipuler les models
 
 
 ## Prerequisites
- ember install ember-bootstrap
- ember install semantic-ui-ember
- ember install ember-font-awesome
+ -ember install ember-bootstrap
+ -ember install semantic-ui-ember
+ -ember install ember-font-awesome
 
 You will need the following things properly installed on your computer.
 
